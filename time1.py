@@ -51,8 +51,11 @@ def update_clock():
     second_x =  WIDTH/2 + 0.6 * WIDTH/2 *math.cos(second_angle) 
     second_y =  HEIGHT/2 + 0.6 * HEIGHT/2 *math.sin(second_angle)
     canvas.create_line(WIDTH/2, HEIGHT/2, second_x, second_y, fill="red", width=2)
+    canvas.after(1000, update_clock)    
+    root.mainloop()
 
-canvas.after(1000, update_clock)    
-   
-update_clock()
-root.mainloop()
+
+
+if __name__ == "__main__":
+    update_clock()
+
